@@ -1,0 +1,8 @@
+.profile-card{
+    background-color: aliceblue; 
+    padding: 20px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: calc(100vw / 3); 
+    height: auto; 
+}
