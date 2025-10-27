@@ -1,0 +1,5 @@
+[
+  { "id": 1, "url": "/src/images/photo1.jpeg", "title": "Yesterday", "date": "2025-10-5", "soundLevel": "6" },
+  { "id": 2, "url": "/src/images/photo2.jpeg", "title": "Today", "date": "2025-10-12", "soundLevel": "8" },
+  { "id": 3, "url": "/src/images/photo3.jpeg", "title": "Tomorrow", "date": "2025-10-19", "soundLevel": "5"}
+]

@@ -1,0 +1,8 @@
+.image-card img{
+    width: 75%;
+}
+
+.image-card p{
+    line-height: 16px;
+    margin: 10px; 
+}
