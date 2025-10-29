@@ -5,6 +5,7 @@ import imageData from "../data/images.json";
 
 function App() {
   const [images, setImages] = useState(imageData);
+  // state to track which image is selected
   const [selectedId, setSelectedId] = useState(null);
 
   //new state for image size 
@@ -28,8 +29,10 @@ function App() {
     }
     setImages(sortedImages);
   };
+  
   return (
     <>
+      {/* slider to control image size */}
       <div className="controls">
         <label>Image size: {imageSize}px</label>
         <input
@@ -41,6 +44,7 @@ function App() {
         />
       </div>
 
+      {/* drop down to control sorting the images  */}
       <div className="controls">
         <label>Sort by: </label>
         <select
@@ -52,6 +56,7 @@ function App() {
           <option value="id">ID</option>
         </select>
       </div>
+
       <div className="gallery">
         {images.map((img) => (
           <ImageCard
