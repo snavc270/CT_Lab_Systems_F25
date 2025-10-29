@@ -1,11 +1,11 @@
-//added image prop and function to move image to front
-function ImageCard({ image, onMoveToFront }) {
+import './ImageCard.css';
+
+function ImageCard({ image, isSelected, onClick }) {
   return (
     <div className="image-card">
-      <img src={image.url} alt={image.title} width="150" />
+      <img src={image.url} alt={image.title} width="150" className={`${isSelected ? 'show' : 'hide'}`}/>
       <p>{image.title}</p>
-      {/* onClick calls the function passed from App.jsx to move this image to the front */}
-      <button onClick={onMoveToFront}>Move to Front</button>
+      <button onClick={onClick}>Show Image</button>
     </div>
   );
 }

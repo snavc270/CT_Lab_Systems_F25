@@ -5,27 +5,21 @@ import imageData from "../data/images.json";
 
 function App(){
 	const [images] = useState(imageData);
-  console.log(images[0].title);
+  const [selectedId, setSelectedId] = useState(null);
 
-  // const moveImageToFront = (index) => {
-  //   //stores the new image array in memory with the selected image at the front
-  //   const newImages = [...images]; 
-  //   const [selected] = newImages.splice(index, 1);
-  //   newImages.unshift(selected);
-  //   setImages(newImages);
-  // };
+  const showImage = (id) => {
+    setSelectedId(selectedId === id ? null : id); // Toggle selected state
+  }
 
   return (
     <>
     <div className="gallery">
-      <ImageCard image={images[0]} alt= {images[0].title} />
-      
-      {images.map((img, i) => (
+      {images.map((img) => (
         <ImageCard
           key={img.id}
           image={img}
-          alt= {img.title}
-          // onMoveToFront={() => moveImageToFront(i)}
+          isSelected={selectedId === img.id}
+          onClick={() => showImage(img.id)}
         />
       ))}
     </div>
