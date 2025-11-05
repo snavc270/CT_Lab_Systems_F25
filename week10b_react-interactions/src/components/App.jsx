@@ -8,8 +8,12 @@ function App() {
   // state to track which image is selected
   const [selectedId, setSelectedId] = useState(null);
 
-  //new state for image size 
+  // new state for image size (kept for ImageCard sizing)
   const [imageSize, setImageSize] = useState(150);
+
+  // how many images to show from the images array
+  // default to showing all images
+  const [imageCount, setImageCount] = useState(imageData.length);
 
   const showImage = (id) => {
     setSelectedId(selectedId === id ? null : id); // Toggle selected state
@@ -29,18 +33,20 @@ function App() {
     }
     setImages(sortedImages);
   };
-  
+
+
   return (
     <>
-      {/* slider to control image size */}
+      {/* slider to control how many images are shown */}
       <div className="controls">
-        <label>Image size: {imageSize}px</label>
+        <label>Number of images: {imageCount}</label>
         <input
           type="range"
-          min="100"
-          max="300"
-          value={imageSize}
-          onChange={(e) => setImageSize(Number(e.target.value))}
+          min="1"
+          max={images.length}
+          step="1"
+          value={imageCount}
+          onChange={(e) => setImageCount(Number(e.target.value))}
         />
       </div>
 
@@ -58,7 +64,8 @@ function App() {
       </div>
 
       <div className="gallery">
-        {images.map((img) => (
+        <img className="bg-image" src="/src/images/photo1.jpeg" alt="Sample"/>
+        {images.slice(0, imageCount).map((img) => (
           <ImageCard
             key={img.id}
             image={img}

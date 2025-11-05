@@ -49,3 +49,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 2rem;
 }
+
+.bg-image {
+  width: auto%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+  position: absolute;
+}
