@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <h2>🛰️ Simple Browser-to-Browser Chat</h2>
+
+    <!-- Message display area -->
+    <div id="chat" style="border:1px solid #ccc; padding:10px; height:200px; width:300px; overflow-y:auto;"></div>
+    <br>
+
+    <!-- Message input and send button -->
+    <input id="messageInput" placeholder="Type your message..." />
+    <button id="sendBtn">Send</button>
+    <button id="clearBtn">Clear</button>
+
+    <h2>Simple WebRTC Signaling Demo</h2>
+
+    <!-- A read-only textarea to display messages being sent and received -->
+    <textarea id="log" rows="10" cols="50" readonly></textarea><br>
+
+    <!-- A button to send a fake "offer" message -->
+    <button id="sendMessage">Send Message</button>
+    <!-- Load the Socket.io client library -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
