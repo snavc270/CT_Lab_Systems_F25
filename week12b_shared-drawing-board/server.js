@@ -17,6 +17,12 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("draw", data);
   });
 
+  // when a client clears their canvas, notify other clients to clear as well
+  socket.on("clear", () => {
+    // rebroadcast clear to everyone except the sender
+    socket.broadcast.emit("clear");
+  });
+
   socket.on("disconnect", () => {
     console.log("🔴 User disconnected:", socket.id);
   });
