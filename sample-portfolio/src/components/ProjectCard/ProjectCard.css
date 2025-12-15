@@ -1,0 +1,5 @@
+.project-card{
+    background-color: var(--color-accent-green);
+    padding: var(--spacing-sm); 
+    border-radius: 10px;
+}

@@ -1,0 +1,32 @@
+:root {
+    /* where you set up your color palette  */
+    --color-bg: #ffffff; 
+    --color-bg-lavender: #EFE9FF;
+    --color-lavender: #9C7EF0; 
+    --color-accent-green: #32F078; 
+    --color-text-primary: #ffffff;
+    --color-text-inverse: #000000; 
+
+    /* where you can set up custom fonts  */
+    --font-base: system-ui, sans-serif; 
+
+    /* spacing for the entire site */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+
+    /* where you would set up font size variables*/
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 3rem;
+
+
+    /* where you would adjust text line heights */
+    --leading-tight: 1.2;
+    --leading-normal: 1.6;
+}
+

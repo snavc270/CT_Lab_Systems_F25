@@ -1,0 +1,23 @@
+.site-header {
+	position: sticky;
+	top: 0;
+	background: var(--color-bg);
+	border-bottom: 1px solid var(--color-lavender); 
+	z-index: 100;
+}
+
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 64px;
+    padding: 0 var(--spacing-md); 
+}
+
+
+.nav-links {
+	display: flex;
+	gap: 1.5rem;
+	list-style: none;
+}
